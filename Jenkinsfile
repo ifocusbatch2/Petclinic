@@ -47,11 +47,11 @@ pipeline{
 
      stage('Sonarqube Analysis'){
         steps{
-            mvn "clean verify sonar:sonar \
+           sh "mvn clean verify sonar:sonar \
             -Dsonar.projectKey='spring-petclinic' \
             -Dsonar.projectName='spring-petclinic' \
             -Dsonar.host.url='http://localhost:9000' \
-            -Dsonar.token=sqp_92e22c2e58430246c8b2f8dbd89a8b053c19197b"
+            -Dsonar.token=sqp_b678f83ca558a3bb7735efadfdbd4697adbebc28"
         }
 
        }
